@@ -1,0 +1,306 @@
+
+@import vars.sass
+html
+	max-width: 2500px
+	margin: 0 auto
+
+*
+	font-family: Raleway, sans-serif
+	font-weight: 400
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+#wpadminbar
+	position: fixed !important
+@font-face
+	font-family: logo
+	src: url('fonts/logo.ttf')
+	
+a, li, .menu, .top-bar, .logo, .icon-line, .icon-menu, .btn, .block, .table, .title-block-2, .icon-block, .text-block-2, .section-1 div, .phones, .description, .btn-form
+	transition: all 0.3s ease
+
+.top-bar
+	color: #fff, 
+	position: fixed
+	height: 50px
+	width: 100%
+	z-index: 10
+
+
+.logo
+	color: $blanco
+	float: left
+	left: -100%
+	font-family: logo
+	font-size: 30px
+	margin: 6px 0 0 10px
+	position: absolute
+	z-index: 999
+
+.icon-menu
+	background: none
+	border-radius: 50%
+	display: block
+	right: 0
+	margin: 5px 5px 0 0
+	padding: 10px
+	position: fixed
+	transform: scale(1)
+	height: 20px
+	width: 20px
+	z-index: 999
+
+	&:hover
+		background: none
+		cursor: pointer
+		transform: scale(0.9)
+
+	.icon-line
+		background: $blanco
+		border-radius: 2px
+		display: block
+		height: 3px
+		width: 20px
+		position: absolute
+	.icon-line:nth-child(1)
+		margin-top: 0
+		transform: scale(1)
+	.icon-line:nth-child(2)
+		margin-top: 7px
+	.icon-line:nth-child(3)
+		margin-top: 14px
+		transform: scale(1)
+	.icon-line:nth-child(4)
+		margin-top: 7px
+
+	/*estilos agregados desde js*/
+.icon-menu.open .icon-line:nth-child(1)
+	width: 0
+	margin-top: 9px
+	transform: scale(0)
+.icon-menu.open .icon-line:nth-child(3)
+	width: 0
+	margin-top: 9px
+	transform: scale(0)
+
+.icon-menu.open .icon-line:nth-child(2)
+	transform: rotate(45deg)
+.icon-menu.open .icon-line:nth-child(4)
+	transform: rotate(-45deg)
+	/**/
+
+
+.menu
+	display: block
+	margin-top: -100%
+	text-align: center
+	position: relative
+	z-index: 1
+	ul
+		left: 50%
+		margin-top: 14px
+		position: absolute
+		li
+			display: inline-block
+			list-style: none
+			position: relative
+			right: 50%
+			a
+				color: $blanco
+				font-size: 13px
+				font-weight: 400
+				letter-spacing: 3px
+				margin: 0 10px
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					color: rgba(255,255,255,0.7)
+
+
+#li-contacto	
+	cursor: pointer	
+
+	
+.cover	
+	height: 100vh
+	position: relative
+	.bg-cover
+		height: 100%
+		position: absolute
+		width: 100%
+
+.table
+	display: table
+	.table-cell
+		display: table-cell
+		vertical-align: middle
+.layer	
+	-webkit-animation: colorFondo 60s ease-out infinite alternate
+	height: 100%
+	position: absolute	
+	text-align: center	
+	width: 100%
+
+
+.text-cover
+	color: $blanco
+
+	.description-cover		
+		font-size: 18px
+		letter-spacing: 18px
+		margin: 0 0 2em 1em
+		text-transform: uppercase
+	.title-cover
+		color: $blanco
+		font-size: 50px
+		font-weight: 900
+		margin: 0 auto
+		text-transform: uppercase
+.description-cover, .btn, .title	
+	letter-spacing: 4px
+.btn
+	border-radius: 30px
+	font-size: 13px
+	font-weight: 700
+	padding: 10px 20px
+	text-align: center
+	text-transform: uppercase
+
+.btn-without-bg
+	border: solid 2px
+	color: $blanco
+	&:hover
+		background: $negro
+		border: solid 2px $negro
+.btn-with-bg
+	background: $blanco
+	color: $gris-4
+	padding: 12px 22px
+	&:hover
+		background: $negro
+		color: $blanco
+.btn-cover
+	margin: 0 15px
+
+/********** SECTIONS ***********/
+
+@keyframes colorFondo
+	0%
+		background: #b51a1a
+	15%
+		background: #ca6900
+	30%
+		background: #cab500
+	35%
+		background: #8aca00
+	50%
+		background: #1ab429
+	65%
+		background: #365b9e
+	75%
+		background: #7700ca
+	100%
+		background: #b51a1a
+@keyframes colorBorder
+	0%
+		background: #b51a1a
+		border: solid 2px #b51a1a
+	15%
+		background: #ca6900
+		border: solid 2px #ca6900
+	30%
+		background: #cab500
+		border: solid 2px #cab500
+	35%
+		background: #8aca00
+		border: solid 2px #8aca00
+	50%
+		background: #1ab429
+		border: solid 2px #1ab429
+	65%
+		background: #365b9e
+		border: solid 2px #365b9e
+	75%
+		background: #7700ca
+		border: solid 2px #7700ca
+	100%
+		background: #b51a1a
+		border: solid 2px #b51a1a
+
+
+
+//**************   SINGLE & PAGE   *******************
+
+//FOOTER
+footer
+	background: $gris-4
+	section
+		display: none
+		padding: 100px 0
+		#ajax-contact
+			margin: 0 auto 75px
+			width: 440px
+			.title
+				color: $color-principal
+	.footer-info
+		background: rgba(0,0,0,0.1)
+		color: $gris-2
+		display: none
+		font-size: 12px
+		padding: 10px 0
+		text-align: center
+		width: 100%
+	a
+		color: $gris-2
+		&:hover
+			color: $color-principal
+.success, .error
+	background: $grisClaro
+	border-radius: 5px
+	margin-left: 20px
+	font-weight: 600
+	text-align: center
+	width: calc(100% - 20px)
+	max-width: 500px
+.error
+	color: #b02c22
+.success
+	color: $verdeLogo
+
+
+.field
+	position: relative
+	.icon-absolute
+		font-size: 20px
+		margin-top: 26px
+		position: absolute
+.icon-absolute, .btn-form
+	color: $gris-2
+.form-input
+	border: none
+	background-color: rgba(0,0,0,0)
+	border-bottom: solid 2px rgba(0,0,0,0.25)
+	color: #fff
+	font-size: 15px
+	font-weight: 500
+	height: 50px
+	margin-bottom: 10px
+	max-width: 385px
+	padding: 10px 20px 0 30px
+	width: 100%
+
+#message
+	min-height: 150px
+	padding-top: 25px
+
+.btn-form
+	background: none
+	border: none
+	float: right
+	font-size: 50px
+	margin-top: 20px
+	&:hover
+		color: $color-principal
+

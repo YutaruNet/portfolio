@@ -1,0 +1,97 @@
+.top-bar
+	position: fixed
+	height: 50px
+	width: 100%
+	z-index: 10
+
+
+.logo
+	float: left
+	left: -100%
+	font-family: logo
+	font-size: 30px
+	margin: 6px 0 0 10px
+	position: absolute
+	z-index: 999
+
+.icon-menu
+	background: none
+	border-radius: 50%
+	display: block
+	right: 0
+	margin: 5px 5px 0 0
+	padding: 10px
+	position: fixed
+	transform: scale(1)
+	height: 20px
+	width: 20px
+	z-index: 999
+
+	&:hover
+		background: none
+		cursor: pointer
+		transform: scale(0.9)
+
+	.icon-line
+		background: $blanco
+		border-radius: 2px
+		display: block
+		height: 3px
+		width: 20px
+		position: absolute
+	.icon-line:nth-child(1)
+		margin-top: 0
+		transform: scale(1)
+	.icon-line:nth-child(2)
+		margin-top: 7px
+	.icon-line:nth-child(3)
+		margin-top: 14px
+		transform: scale(1)
+	.icon-line:nth-child(4)
+		margin-top: 7px
+
+	/*estilos agregados desde js*/
+.icon-menu.open .icon-line:nth-child(1)
+	width: 0
+	margin-top: 9px
+	transform: scale(0)
+.icon-menu.open .icon-line:nth-child(3)
+	width: 0
+	margin-top: 9px
+	transform: scale(0)
+
+.icon-menu.open .icon-line:nth-child(2)
+	transform: rotate(45deg)
+.icon-menu.open .icon-line:nth-child(4)
+	transform: rotate(-45deg)
+	/**/
+
+
+.menu
+	display: block
+	margin-top: -100%
+	text-align: center
+	position: relative
+	z-index: 1
+	ul
+		left: 50%
+		margin-top: 14px
+		position: absolute
+		li
+			display: inline-block
+			list-style: none
+			position: relative
+			right: 50%
+			a
+				font-size: 13px
+				font-weight: 400
+				letter-spacing: 3px
+				margin: 0 10px
+				text-decoration: none
+				text-transform: uppercase
+				&:hover
+					color: rgba(255,255,255,0.7)
+
+
+#li-contacto	
+	cursor: pointer	

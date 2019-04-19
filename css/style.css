@@ -1,0 +1,321 @@
+.top-bar {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 10; }
+
+.logo {
+  float: left;
+  left: -100%;
+  font-family: logo;
+  font-size: 30px;
+  margin: 6px 0 0 10px;
+  position: absolute;
+  z-index: 999; }
+
+.icon-menu {
+  background: none;
+  border-radius: 50%;
+  display: block;
+  right: 0;
+  margin: 5px 5px 0 0;
+  padding: 10px;
+  position: fixed;
+  transform: scale(1);
+  height: 20px;
+  width: 20px;
+  z-index: 999;
+  /*estilos agregados desde js */ }
+  .icon-menu:hover {
+    background: none;
+    cursor: pointer;
+    transform: scale(0.9); }
+  .icon-menu .icon-line {
+    background: #ffffff;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    width: 20px;
+    position: absolute; }
+  .icon-menu .icon-line:nth-child(1) {
+    margin-top: 0;
+    transform: scale(1); }
+  .icon-menu .icon-line:nth-child(2) {
+    margin-top: 7px; }
+  .icon-menu .icon-line:nth-child(3) {
+    margin-top: 14px;
+    transform: scale(1); }
+  .icon-menu .icon-line:nth-child(4) {
+    margin-top: 7px; }
+
+.icon-menu.open .icon-line:nth-child(1) {
+  width: 0;
+  margin-top: 9px;
+  transform: scale(0); }
+
+.icon-menu.open .icon-line:nth-child(3) {
+  width: 0;
+  margin-top: 9px;
+  transform: scale(0); }
+
+.icon-menu.open .icon-line:nth-child(2) {
+  transform: rotate(45deg); }
+
+.icon-menu.open .icon-line:nth-child(4) {
+  transform: rotate(-45deg);
+  /* */ }
+
+.menu {
+  display: block;
+  margin-top: -100%;
+  text-align: center;
+  position: relative;
+  z-index: 1; }
+  .menu ul {
+    left: 50%;
+    margin-top: 14px;
+    position: absolute; }
+    .menu ul li {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      right: 50%; }
+      .menu ul li a {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        margin: 0 10px;
+        text-decoration: none;
+        text-transform: uppercase; }
+        .menu ul li a:hover {
+          color: rgba(255, 255, 255, 0.7); }
+
+#li-contacto {
+  cursor: pointer; }
+
+html {
+  max-width: 2500px;
+  margin: 0 auto; }
+
+* {
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: logo;
+  src: url("fonts/logo.ttf"); }
+/*       DEFAULT STYLES       */
+a, li, .menu, .top-bar, .logo, .icon-line, .icon-menu, .btn, .block, .table, .title-block-2, .icon-block, .text-block-2, .section-1 div, .phones, .description, .btn-form {
+  transition: all 0.3s ease; }
+
+.top-bar, .logo, .menu ul li a, .text-cover, .title, .btn-without-bg {
+  color: #ffffff; }
+
+.title {
+  font-size: 25px;
+  font-weight: 900; }
+
+.title, .btn {
+  letter-spacing: 5px; }
+
+.text-cover, .btn, footer .title {
+  text-align: center; }
+
+.logo, .title, footer .title, .btn {
+  text-transform: uppercase; }
+
+.pointer {
+  cursor: pointer; }
+
+/****************************** */
+.table {
+  display: table; }
+  .table .table-cell {
+    display: table-cell;
+    vertical-align: middle; }
+
+.btn {
+  border-radius: 30px;
+  border: solid 2px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 20px; }
+
+.cover {
+  height: 100vh;
+  min-height: 350px; }
+  .cover .table {
+    animation: colorFondo 60s ease-out infinite alternate;
+    -webkit-animation: colorFondo 60s ease-out infinite alternate;
+    -moz-animation: colorFondo 60s ease-out infinite alternate;
+    -ms-animation: colorFondo 60s ease-out infinite alternate;
+    -o-animation: colorFondo 60s ease-out infinite alternate;
+    height: 100%;
+    width: 100%; }
+  .cover .text-cover {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center; }
+    .cover .text-cover .title {
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 10px; }
+    .cover .text-cover .description-cover {
+      color: #ffffff;
+      font-size: 12px;
+      letter-spacing: 3px; }
+    .cover .text-cover .btn {
+      display: inline-block;
+      margin: 25px; }
+    .cover .text-cover .btn-without-bg:hover, .cover .text-cover .btn-with-bg:hover {
+      background: #212121;
+      border: solid 2px #212121; }
+    .cover .text-cover .btn-with-bg {
+      border: solid 2px #ffffff;
+      background: #ffffff;
+      color: #20222b; }
+      .cover .text-cover .btn-with-bg:hover {
+        color: #ffffff; }
+
+@keyframes colorFondo {
+  0% {
+    background: #365b9e; }
+  15% {
+    background: #7700ca; }
+  30% {
+    background: #b51a1a; }
+  35% {
+    background: #cab500; }
+  50% {
+    background: #ca6900; }
+  65% {
+    background: #8aca00; }
+  75% {
+    background: #1ab429; }
+  100% {
+    background: #365b9e; } }
+.block {
+  display: inline-block; }
+
+.section1 {
+  background: #f1f1f1;
+  padding-top: 5px;
+  text-align: center;
+  width: 100%; }
+  .section1 .block {
+    height: 450px;
+    width: 100%; }
+    .section1 .block .table {
+      background: rgba(0, 0, 0, 0.8);
+      height: 100%;
+      width: 100%; }
+      .section1 .block .table:hover {
+        background: rgba(0, 0, 0, 0.5); }
+      .section1 .block .table .table-cell .title {
+        color: #ffffff; }
+  .section1 .img1 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img1.jpg?i=1"); }
+  .section1 .img2 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img2.jpg?i=1"); }
+  .section1 .img3 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img3.jpg?i=1"); }
+  .section1 .img4 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img4.jpg?i=1"); }
+  .section1 .img5 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img5.jpg?i=1"); }
+  .section1 .img6 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img6.jpg?i=1"); }
+  .section1 .img7 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img7.jpg?i=1"); }
+  .section1 .img8 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img8.jpg?i=1"); }
+  .section1 .img9 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img9.jpg?i=1"); }
+  .section1 .img10 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img10.jpg?i=1"); }
+  .section1 .img11 {
+    background-image: url("http://demoyuta.byethost7.com/katrine/wp-content/uploads/2017/09/img11.jpg?i=1"); }
+
+.icon {
+  border: solid #02c9b4 2px; }
+
+footer {
+  background: #20222b; }
+  footer section {
+    padding: 100px 0; }
+    footer section #ajax-contact {
+      margin: 0 auto 75px;
+      width: 440px; }
+      footer section #ajax-contact .title {
+        color: #02c9b4; }
+  footer .footer-info {
+    background: rgba(0, 0, 0, 0.1);
+    color: #929497;
+    display: none;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; }
+  footer a {
+    color: #929497; }
+    footer a:hover {
+      color: #02c9b4; }
+
+.success, .error {
+  background: #eee;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-weight: 600;
+  text-align: center;
+  width: calc(100% - 20px);
+  max-width: 500px; }
+
+.error {
+  color: #b02c22; }
+
+.success {
+  color: #8aca00; }
+
+.field {
+  position: relative; }
+  .field .icon-absolute {
+    font-size: 20px;
+    margin-top: 26px;
+    position: absolute; }
+
+.form-input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: solid 2px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  margin-bottom: 10px;
+  max-width: 385px;
+  padding: 10px 20px 0 30px;
+  width: 100%; }
+
+#message {
+  min-height: 150px;
+  padding-top: 25px; }
+
+.btn-form {
+  color: #929497;
+  background: none;
+  border: none;
+  float: right;
+  font-weight: 900;
+  font-size: 50px;
+  transform: rotate(-35deg); }
+  .btn-form:hover {
+    color: #02c9b4;
+    font-size: 55px;
+    transform: rotate(-50deg); }
+
+/*# sourceMappingURL=style.css.map */
